@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #0b2434;
+  height: 380px;
+  max-width: 340px;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.content {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  display: grid;
+  height: 100%;
+  position: relative;
+  place-items: center;
+  text-align: center;
+}
+
+.heading {
+  color: #2b283a;
+  font-size: 25.6px;
+  margin: 0 0 5px;
+}
+
+.description {
+  color: #4a4e74;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  margin: 0 auto 23px;
+  max-width: 233px;
+}
+
+.dices {
+  display: grid;
+  gap: 18px;
+  grid-template: auto auto / repeat(5, 1fr);
+  list-style-type: none;
+  margin: 0 auto 25px;
+  max-width: 252px;
+  padding: 0;
+}
+
+.dice {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  height: 36px;
+  padding: 5px;
+  position: relative;
+  width: 36px;
+}
+
+.dice.freezed {
+  background-color: #59e391;
+}
+
+.dice > span {
+  background-color: #0b2434;
+  border-radius: 50%;
+  display: block;
+  height: 4px;
+  position: absolute;
+  width: 4px;
+}
+
+.dice.one > span,
+.dice.three > span:nth-of-type(2),
+.dice.five > span:nth-of-type(3) {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice.two > span:first-of-type,
+.dice.three > span:first-of-type,
+.dice.four > span:first-of-type,
+.dice.five > span:first-of-type,
+.dice.six > span:first-of-type {
+  left: 5px;
+  top: 5px;
+}
+.dice.two > span:last-of-type,
+.dice.three > span:last-of-type,
+.dice.four > span:last-of-type,
+.dice.five > span:last-of-type,
+.dice.six > span:last-of-type {
+  bottom: 5px;
+  right: 5px;
+}
+
+.dice.four > span:nth-of-type(2),
+.dice.five > span:nth-of-type(2),
+.dice.six > span:nth-of-type(2) {
+  right: 5px;
+  top: 5px;
+}
+.dice.four > span:nth-of-type(3),
+.dice.five > span:nth-of-type(4),
+.dice.six > span:nth-of-type(5) {
+  left: 5px;
+  bottom: 5px;
+}
+
+.dice.six > span:nth-of-type(3) {
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+.dice.six > span:nth-of-type(4) {
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.button {
+  background-color: #5035ff;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 33px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.extra-info {
+  display: flex;
+  font-size: 11px;
+  justify-content: space-between;
+  left: 5px;
+  position: absolute;
+  right: 5px;
+  text-align: left;
+  top: 5px;
+}
+
+.extra-info > p {
+  margin: 0;
+}
